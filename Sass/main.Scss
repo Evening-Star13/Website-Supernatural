@@ -11,7 +11,7 @@ $color-header-background: rgb(58, 58, 58);
 $color-header-gradients: rgba(120, 120, 120, 0.8);
 $color-header-font: rgb(119, 119, 119);
 $color-h1-color: rgb(255, 255, 255);
-$color-btn-hover: rgba(0, 0, 0, 0.2);
+$color-btn-hover: rgba(0, 0, 0, 0.4);
 
 html {
   font-size: 62.5%;
@@ -32,38 +32,33 @@ body {
   background-image: linear-gradient(
       to right bottom,
       rgba($color-header-gradient, 0.8),
-      rgba($color-header-gradients, 0.8)),
-      
-    
+      rgba($color-header-gradients, 0.8)
+    ),
     url("/Images/supernatural-cast.jpg");
-
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-}
 
-.header__log-box {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-.header__logo {
-  height: 2.1875rem;
-  backface-visibility: hidden;
-}
+  &__logo-box {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+  }
 
-/* .logo:hover{
-    animation: moveInRight 1.5s ease-in-out;
-} */
+  &__logo {
+    height: 2.1875rem;
+    backface-visibility: hidden;
+  }
 
-.header__text-box {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  &__text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -73,27 +68,24 @@ body {
 
   backface-visibility: hidden;
   margin-bottom: 3.75rem;
-}
 
-.heading-primary--main {
-  display: block;
-  font-size: 3.75rem;
-  font-weight: 400;
-  letter-spacing: 2.1875rem;
+  &--main {
+    display: block;
+    font-size: 3.75rem;
+    font-weight: 400;
+    letter-spacing: 2.1875rem;
 
-  animation: moveInLeft 1.5s ease-in-out;
+    animation: moveInLeft 1.5s ease-in-out;
+  }
 
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 1.5s; */
-}
+  &--sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.9375rem;
 
-.heading-primary--sub {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.9375rem;
-
-  animation: moveInRight 1.5s ease-in-out;
+    animation: moveInRight 1.5s ease-in-out;
+  }
 }
 
 @keyframes moveInLeft {
@@ -143,57 +135,58 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1rem 2.5rem;
-  display: inline-block;
-  border-radius: 6.25rem;
-  transition: all 0.2s;
-  position: relative;
-}
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    border-radius: 6.25rem;
+    transition: all 0.2s;
+    position: relative;
+  }
 
-.btn:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.625rem 1.25rem $color-btn-hover;
-}
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.625rem 20px $color-btn-hover;
 
-.btn:active {
-  transform: translateY(-0.0625rem);
-  box-shadow: 0 5px 10px $color-btn-hover;
-}
+    &::after {
+      transform: scaleX(1.5) scaleY(1.6);
+      opacity: 0;
+    }
+  }
 
-.btn--white {
-  background-color: $color-h1-color;
-  color: $color-header-font;
-  font-weight: 900;
+  &:active {
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.3125rem 0.625rem $color-btn-hover;
+  }
 
-}
+  &--white {
+    background-color: $color-h1-color;
+    color: $color-header-font;
+    font-weight: 900;
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 6.25rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
+    &::after {
+      background-color: $color-h1-color;
+    }
+  }
 
-.btn--white::after {
-  background-color: $color-h1-color;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 6.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
 }

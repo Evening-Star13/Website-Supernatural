@@ -22,27 +22,21 @@ body {
   background-image: linear-gradient(to right bottom, rgba(58, 58, 58, 0.8), rgba(120, 120, 120, 0.8)), url("/Images/supernatural-cast.jpg");
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-
-.header__log-box {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem; }
-
-.header__logo {
-  height: 2.1875rem;
-  backface-visibility: hidden; }
-
-/* .logo:hover{
-    animation: moveInRight 1.5s ease-in-out;
-} */
-.header__text-box {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem; }
+  .header__logo {
+    height: 2.1875rem;
+    backface-visibility: hidden; }
+  .header__text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: white;
@@ -50,22 +44,18 @@ body {
   text-align: center;
   backface-visibility: hidden;
   margin-bottom: 3.75rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 3.75rem;
-  font-weight: 400;
-  letter-spacing: 2.1875rem;
-  animation: moveInLeft 1.5s ease-in-out;
-  /* animation-iteration-count: 3; */
-  /* animation-delay: 1.5s; */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.9375rem;
-  animation: moveInRight 1.5s ease-in-out; }
+  .heading-primary--main {
+    display: block;
+    font-size: 3.75rem;
+    font-weight: 400;
+    letter-spacing: 2.1875rem;
+    animation: moveInLeft 1.5s ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.9375rem;
+    animation: moveInRight 1.5s ease-in-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -98,8 +88,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1rem 2.5rem;
@@ -110,16 +99,21 @@ body {
 
 .btn:hover {
   transform: translateY(-0.2rem);
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.625rem 20px rgba(0, 0, 0, 0.4); }
+  .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.0625rem);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.4); }
 
 .btn--white {
   background-color: white;
   color: #777777;
   font-weight: 900; }
+  .btn--white::after {
+    background-color: white; }
 
 .btn::after {
   content: "";
@@ -132,13 +126,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: white; }
-
-.btn:hover::after {
-  transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
