@@ -1,3 +1,34 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    /* transform: translateY(150px); */ }
+  80% {
+    /* transform: translateX(-10px); */
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+    /* transform: translateX(150px); */ }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -9,37 +40,18 @@ html {
   font-size: 62.5%; }
 
 body {
+  box-sizing: border-box; }
+
+body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.7;
   color: #777777;
-  padding: 0.625rem;
-  box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(58, 58, 58, 0.8), rgba(120, 120, 120, 0.8)), url("/Images/supernatural-cast.jpg");
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 0.25rem;
-    left: 0.25rem; }
-  .header__logo {
-    height: 2.1875rem;
-    backface-visibility: hidden; }
-  .header__text-box {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  padding: 0.625rem; }
 
 .heading-primary {
-  color: white;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   backface-visibility: hidden;
@@ -57,36 +69,42 @@ body {
     letter-spacing: 0.9375rem;
     animation: moveInRight 1.5s ease-in-out; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #777777, #3a3a3a);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+  animation: moveInRight 1.5s ease-in-out; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.25rem 0.25rem 1rem #00000066; }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-    /* transform: translateX(150px); */ }
-  80% {
-    /* transform: translateX(-10px); */
-    transform: translateY(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.heading-tertiary {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(2rem);
-    /* transform: translateX(150px); */ }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
+.paragraph {
+  font-size: 1rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1.875rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-big {
+  margin-bottom: 5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 2.5rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -95,25 +113,26 @@ body {
   display: inline-block;
   border-radius: 6.25rem;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  font-size: 1rem; }
 
 .btn:hover {
   transform: translateY(-0.2rem);
-  box-shadow: 0 0.625rem 20px rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0.625rem 20px #00000066; }
   .btn:hover::after {
     transform: scaleX(1.5) scaleY(1.6);
     opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.0625rem);
-  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 0.3125rem 0.625rem #00000066; }
 
 .btn--white {
-  background-color: white;
+  background-color: #ffffff;
   color: #777777;
   font-weight: 900; }
   .btn--white::after {
-    background-color: white; }
+    background-color: #ffffff; }
 
 .btn::after {
   content: "";
@@ -130,3 +149,82 @@ body {
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1rem;
+  color: #777777;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #777777;
+  padding: 3px;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  background-color: #353535ac;
+  color: #ffffff;
+  box-shadow: 0 0.625rem 1.25rem #00000066;
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.3125rem 0.625rem #00000066;
+  transform: translateY(0); }
+
+.row {
+  max-width: 71.25rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 5rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 1.75rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 1.75rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 1.75rem) /3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 1.75rem) /3) + 1.75rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 1.75rem) /4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 1.75rem) /4) + 1.75rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 1.75rem) /4) + 2 * 1.75rem); }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(58, 58, 58, 0.8), rgba(120, 120, 120, 0.8)), url("/Images/supernatural-cast.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem; }
+  .header__logo {
+    height: 2.2rem;
+    backface-visibility: hidden; }
+    .header__logo:hover {
+      background-color: #353535ac;
+      color: #ffffff;
+      box-shadow: 0 0.425rem 0.75rem #a0a0a0;
+      transform: translateY(-2px); }
+    .header__logo:active {
+      box-shadow: 0 0.3rem 0.625rem #a0a0a0;
+      transform: translateY(0); }
+  .header__text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.section-about {
+  background-color: #a1a1a155;
+  padding: 20rem 0;
+  margin-top: -20vh; }
