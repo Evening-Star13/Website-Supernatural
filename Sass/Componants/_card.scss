@@ -1,0 +1,167 @@
+.card {
+  perspective: 93.75rem;
+  -moz-perspective: 93.75rem;
+  position: relative;
+  height: 31.25rem;
+
+  &__side {
+    background-color: $color-card-front;
+    font-size: 1.5rem;
+
+    height: 31.25rem;
+    transition: all 0.8s ease-in;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1rem 2.5rem $color-black-opacity;
+
+    &--front {
+      background-color: $color-card-front;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &--1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 14.375rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../../Images/Lucifer.webp);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../../Images/Azaze.webp);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../../Images/Cain.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-header-font;
+    position: absolute;
+    top: 7.5rem;
+    right: 1.25rem;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 0.625rem 0.9375rem;
+    box-decoration-break: clone;
+
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        ($color-primary-light-1),
+        ($color-primary-dark-1)
+      );
+    }
+
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        ($color-primary-light-1),
+        ($color-primary-dark-1)
+      );
+    }
+  }
+
+  &__details {
+    p {
+      list-style: none;
+      text-align: center;
+      font-size: 0.9375rem;
+      padding: 0.625rem;
+      line-height: 2.7;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-header-background;
+        // width: 80%;
+      }
+    }
+  }
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__name-first {
+    font-size: 1.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__name-last {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  .lucifer-sigil {
+    width: 150px;
+    margin-bottom: 2rem;
+}
+
+  .azazel-sigil {
+    width: 100px;
+    margin-bottom: 2rem;
+}
+
+
+.cain-sigil {
+  width: 80px;
+  margin-bottom: 2rem;
+}
+}

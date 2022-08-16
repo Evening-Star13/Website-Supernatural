@@ -1,45 +1,45 @@
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-header-gradient, 0.8),
-        rgba($color-header-gradients, 0.8)
-      ),
-      url("/Images/supernatural-cast.jpg");
-    background-size: cover;
-    background-position: top;
-    position: relative;
-  
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  
-    &__logo-box {
-      position: absolute;
-      top: 0.25rem;
-      left: 0.25rem;
-    }
-  
-    &__logo {
-      height: 2.2rem;
-      backface-visibility: hidden;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-header-gradient, 0.8),
+      rgba($color-header-gradients, 0.8)
+    ),
+    url("/Images/supernatural-cast.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-      &:hover {
-        background-color: $color-grey-dark-1;
-        color: $color-h1-color;
-        box-shadow: 0 .425rem .75rem $color-logo;
-        transform:translateY(-2px);
-      }
-    
-      &:active {
-        box-shadow: 0 .3rem .625rem $color-logo;
-        transform:translateY(0);
-      }
+  &__logo-box {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+  }
+
+  &__logo {
+    height: 2.2rem;
+    backface-visibility: hidden;
+
+    &:hover {
+      background-color: $color-grey-dark-1;
+      color: $color-h1-color;
+      box-shadow: 0 0.425rem 0.75rem $color-logo;
+      transform: translateY(-2px);
     }
-  
-    &__text-box {
-      position: absolute;
-      top: 60%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
+
+    &:active {
+      box-shadow: 0 0.3rem 0.625rem $color-logo;
+      transform: translateY(0);
     }
   }
+
+  &__text-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}

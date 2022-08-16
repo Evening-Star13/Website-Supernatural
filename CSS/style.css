@@ -106,6 +106,12 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1rem; }
 
+.u-margin-top-big {
+  margin-top: 5rem; }
+
+.u-margin-top-huge {
+  margin-top: 6rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -133,6 +139,20 @@ body {
   font-weight: 900; }
   .btn--white::after {
     background-color: #ffffff; }
+
+.btn--dark {
+  background-color: #a0a0a0;
+  color: #777777;
+  font-weight: 900; }
+  .btn--dark::after {
+    background-color: #201f1f55; }
+
+.btn--discover {
+  background-color: #3312119b;
+  color: #777777;
+  font-weight: 900; }
+  .btn--discover::after {
+    background-color: #201f1f55; }
 
 .btn::after {
   content: "";
@@ -169,6 +189,167 @@ body {
   box-shadow: 0 0.3125rem 0.625rem #00000066;
   transform: translateY(0); }
 
+.card {
+  perspective: 93.75rem;
+  -moz-perspective: 93.75rem;
+  position: relative;
+  height: 31.25rem; }
+  .card__side {
+    background-color: #3d261e;
+    font-size: 1.5rem;
+    height: 31.25rem;
+    transition: all 0.8s ease-in;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1rem 2.5rem #000000ba; }
+    .card__side--front {
+      background-color: #3d261e; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #725a43, #242220); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 14.375rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #725a43, #242220), url(../../Images/Lucifer.webp); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #725a43, #242220), url(../../Images/Azaze.webp); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #725a43, #242220), url(../../Images/Cain.jpg); }
+  .card__heading {
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #777777;
+    position: absolute;
+    top: 7.5rem;
+    right: 1.25rem;
+    width: 75%; }
+  .card__heading-span {
+    padding: 0.625rem 0.9375rem;
+    box-decoration-break: clone; }
+    .card__heading-span-1 {
+      background-image: linear-gradient(to right bottom, #725a439b, #312921); }
+    .card__heading-span-2 {
+      background-image: linear-gradient(to right bottom, #725a439b, #312921); }
+  .card__details p {
+    list-style: none;
+    text-align: center;
+    font-size: 0.9375rem;
+    padding: 0.625rem;
+    line-height: 2.7; }
+    .card__details p:not(:last-child) {
+      border-bottom: 1px solid #3a3a3a; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__name-first {
+    font-size: 1.625rem;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .card__name-last {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2rem; }
+  .card .lucifer-sigil {
+    width: 150px;
+    margin-bottom: 2rem; }
+  .card .azazel-sigil {
+    width: 100px;
+    margin-bottom: 2rem; }
+  .card .cain-sigil {
+    width: 80px;
+    margin-bottom: 2rem; }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1rem 2.5rem #00000066;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: .5rem; }
+    .composition__photo--p1 {
+      left: 0;
+      top: 5.25rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 7.25rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 12.25rem; }
+    .composition__photo:hover {
+      outline: 0.75rem solid #6e6d6d85;
+      transform: scale(1.25) translateY(-0.5rem);
+      box-shadow: 0 1.5625rem 2.5rem #00000088;
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
+
+.feature-box {
+  background-color: #3a3a3a70;
+  font-size: 1.125rem;
+  padding: 1.5625rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1rem 2.5rem #000000ba;
+  transition: transform 0.3s; }
+  .feature-box__icon {
+    font-size: 3.75rem;
+    margin-bottom: 0.3125rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #777777, #3a3a3a);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-1rem) scale(1.03); }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.875rem 3.75rem #000000ba;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 3.75rem;
+  padding-left: 5.625rem;
+  font-size: 1rem;
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    width: 9.375rem;
+    height: 9.375rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-1.875rem) skewX(12deg); }
+  .story__image {
+    height: 100%; }
+  .story__text {
+    transform: skewX(12deg); }
+
 .row {
   max-width: 71.25rem;
   margin: 0 auto; }
@@ -181,19 +362,19 @@ body {
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 1.75rem; }
+      margin-right: 3.75rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 1.75rem) / 2); }
+    width: calc((100% - 3.75rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 1.75rem) /3); }
+    width: calc((100% - 2 * 3.75rem) /3); }
   .row .col-2-of-3 {
-    width: calc(2 * ((100% - 2 * 1.75rem) /3) + 1.75rem); }
+    width: calc(2 * ((100% - 2 * 3.75rem) /3) + 3.75rem); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 1.75rem) /4); }
+    width: calc((100% - 3 * 3.75rem) /4); }
   .row .col-2-of-4 {
-    width: calc(2 * ((100% - 3 * 1.75rem) /4) + 1.75rem); }
+    width: calc(2 * ((100% - 3 * 3.75rem) /4) + 3.75rem); }
   .row .col-3-of-4 {
-    width: calc(3 * ((100% - 3 * 1.75rem) /4) + 2 * 1.75rem); }
+    width: calc(3 * ((100% - 3 * 3.75rem) /4) + 2 * 3.75rem); }
 
 .header {
   height: 95vh;
@@ -201,6 +382,7 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -225,6 +407,25 @@ body {
     text-align: center; }
 
 .section-about {
-  background-color: #a1a1a155;
+  background-color: #201f1f55;
   padding: 20rem 0;
   margin-top: -20vh; }
+
+.section-features {
+  padding: 12.5rem 0;
+  background-image: linear-gradient(to right bottom, rgba(58, 58, 58, 0.8), rgba(120, 120, 120, 0.8)), url("/Images/imageedit_8_9294547708.jpg");
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -7.6255rem; }
+  .section-features > * {
+    transform: skewY(7deg); }
+
+.section-allies {
+  background-color: #201f1f55;
+  padding: 20rem 0;
+  padding: 20rem 0 15.25rem 0;
+  margin-top: -8rem; }
+
+.section-stories {
+  padding: 10rem 0;
+  background-color: #a0a0a0; }

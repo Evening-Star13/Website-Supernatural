@@ -4,12 +4,33 @@ $color-header-background: #3a3a3a;
 $color-header-gradients: #787878cc;
 $color-header-font: #777777;
 $color-h1-color: #ffffff;
-$color-btn-hover: #00000066;
+$color-h1-color-dark: #a0a0a0;
+$color-h1-color-discover: #3312119b;
+$color-h1-color-opacity: #3a3a3a70;
 
-$color-grey-light-1: #a1a1a155;
+$color-black: #000000;
+$color-black-opacity: #000000ba;
+$color-grey-opacity: #6e6d6d85;
+$color-btn-hover: #00000066;
+$color-btn-hover-up: #00000088;
+
+$color-grey-light-1: #201f1f55;
+$color-section-background: #201f1f55;
 $color-grey-dark-1: #353535ac;
 
 $color-logo: #a0a0a0;
+$color-card-front: #3d261e;
+
+$color-primary-light: #725a43;
+$color-primary-dark: #242220;
+
+$color-primary-light-1: #725a439b;
+$color-primary-dark-1: #312921;
+
+
+
+
+
 
 // Font-Sizes
 $default-font-size: 1rem;
@@ -17,4 +38,4 @@ $default-font-size: 1rem;
 // Grid
 $grid-width: 71.25rem;
 $gutter-vertical: 5rem;
-$gutter-horizontal: 1.75rem;
+$gutter-horizontal: 3.75rem;

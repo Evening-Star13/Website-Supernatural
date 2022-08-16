@@ -36,6 +36,26 @@
     }
   }
 
+  &--dark {
+    background-color: $color-h1-color-dark;
+    color: $color-header-font;
+    font-weight: 900;
+
+    &::after {
+      background-color: $color-grey-light-1;
+    }
+  }
+
+  &--discover {
+    background-color: $color-h1-color-discover;
+    color: $color-header-font;
+    font-weight: 900;
+
+    &::after {
+      background-color: $color-grey-light-1;
+    }
+  }
+
   &::after {
     content: "";
     display: inline-block;
