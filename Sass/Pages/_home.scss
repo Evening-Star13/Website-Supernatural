@@ -20,17 +20,46 @@
   & > * {
     transform: skewY(7deg);
   }
-  
 }
 
-.section-allies {
-    background-color: $color-section-background;
+.section-enemies {
+  background-color: $color-section-background;
   padding: 20rem 0;
   padding: 20rem 0 15.25rem 0;
   margin-top: -8rem;
 }
 
 .section-stories {
+  position: relative;
   padding: 10rem 0;
-  background-color: $color-logo;
+}
+
+.section-book {
+  padding: 9.375rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  background-image: linear-gradient(105deg,
+   ($color-h1-color-opacity)0%,
+   ($color-h1-color-opacity)50%,
+    transparent 50%) ,
+     url(../../Images/cast960x540.png);
+    opacity: 0.5;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 2.5rem $color-black-opacity;
+
+  height: 36.25rem;
+
+  &__form {
+    width: 50%;
+    padding: 3.75rem;
+
+  }
+  
 }

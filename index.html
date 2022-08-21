@@ -23,6 +23,34 @@
 </head>
 
 <body>
+
+
+    <!-- Navigation -->
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"> &nbsp;</span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#"
+                        class="navigation__link"> Dean</a></li>
+                <li class="navigation__item"><a href="#"
+                        class="navigation__link"> Sam</a></li>
+                <li class="navigation__item"><a href="#"
+                        class="navigation__link"> Castiel</a></li>
+                <li class="navigation__item"><a href="#"
+                        class="navigation__link"> Bobby</a></li>
+                <li class="navigation__item"><a href="#"
+                        class="navigation__link"> Crowley</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img src="/Images/LogoCB-removebg.png" alt="Logo"
@@ -34,12 +62,18 @@
                 <span class="heading-primary--sub">"Driver picks the music <br>
                     Shotgun shuts his cakehole"</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover The Good
-                Guys</a>
+            <a href="#allies" class="btn btn--white btn--animated">Discover
+                Allies</a>
+            <a href="#enemies" class="btn btn--white btn--animated">Discover
+                Enemies</a>
         </div>
     </header>
 
     <main>
+
+
+        <!-- Dean and Sam -->
+
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
@@ -100,8 +134,16 @@
                 </div>
             </div>
         </section>
-        <section class="section-features">
 
+
+        <!-- Allies -->
+
+        <section class="section-features" id="allies">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Allies
+                </h2>
+            </div>
 
             <div class="row">
                 <div class="col-1-of-4">
@@ -161,10 +203,13 @@
             </div>
         </section>
 
-        <section class="section-allies">
+
+        <!-- Enemies -->
+
+        <section class="section-enemies" id="enemies">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
-                    Allies/Enemies
+                    Enemies
                 </h2>
             </div>
 
@@ -196,9 +241,12 @@
                                 <div class="card__name-box">
                                     <p class="card__name-first">Lucifer</p>
                                     <p class="card__name-last">MorningStar</p>
-                                    <img class="lucifer-sigil" src="/Images/lucifer-sigil-removebg-preview.png" alt="">
+                                    <img class="lucifer-sigil"
+                                        src="/Images/lucifer-sigil-removebg-preview.png"
+                                        alt="">
                                 </div>
-                                <a href="#" class="btn btn--dark">History</a>
+                                <a href="#Lucifer"
+                                    class="btn btn--dark">History</a>
                             </div>
                         </div>
                     </div>
@@ -217,17 +265,24 @@
                                 </span>
                             </h4>
                             <div class="card__details">
-                                <p>Azazel was a powerful demon and a Prince of Hell who served Lucifer. Until Sin City, Azazel's name was not revealed and he was referred to by nicknames such as The Demon, The Yellow-Eyed Demon. </p>
+                                <p>Azazel was a powerful demon and a Prince of
+                                    Hell who served Lucifer. Until Sin City,
+                                    Azazel's name was not revealed and he was
+                                    referred to by nicknames such as The Demon,
+                                    The Yellow-Eyed Demon. </p>
                             </div>
                         </div>
                         <div
                             class="card__side card__side--back card__side--back--1">
                             <div class="card__cta">
-                                <div class="card__name-box">        
+                                <div class="card__name-box">
                                     <p class="card__name-last">Azazel</p>
-                                    <img class="azazel-sigil" src="/Images/azazel-sigil-removebg-preview.png" alt="">
+                                    <img class="azazel-sigil"
+                                        src="/Images/azazel-sigil-removebg-preview.png"
+                                        alt="">
                                 </div>
-                                <a href="#" class="btn btn--dark">History</a>
+                                <a href="#Azazel"
+                                    class="btn btn--dark">History</a>
                             </div>
                         </div>
                     </div>
@@ -246,17 +301,25 @@
                                 </span>
                             </h4>
                             <div class="card__details">
-                                <p>Cain, also known as The Father of Murder, was the firstborn of Adam and Eve, the brother of Abel, founder, former leader, and trainer of the Knights of Hell and one of the most legendary, powerful and feared demons of all time.</p>
+                                <p>Cain, also known as The Father of Murder, was
+                                    the firstborn of Adam and Eve, the brother
+                                    of Abel, founder, former leader, and trainer
+                                    of the Knights of Hell and one of the most
+                                    legendary, powerful and feared demons of all
+                                    time.</p>
                             </div>
                         </div>
                         <div
                             class="card__side card__side--back card__side--back--1">
                             <div class="card__cta">
-                                <div class="card__name-box">        
+                                <div class="card__name-box">
                                     <p class="card__name-last">Cain</p>
-                                    <img class="cain-sigil" src="/Images/cain-sigil-removebg-preview.png" alt="">
+                                    <img class="cain-sigil"
+                                        src="/Images/cain-sigil-removebg-preview.png"
+                                        alt="">
                                 </div>
-                                <a href="#" class="btn btn--dark">History</a>
+                                <a href="#Cain"
+                                    class="btn btn--dark">History</a>
                             </div>
                         </div>
                     </div>
@@ -265,36 +328,537 @@
 
             <div class="u-center-text u-margin-top-huge">
                 <a href="#" class="btn btn--discover">
-                    Discover All Allies and Enemies
+                    Discover More Allies and Enemies
                 </a>
             </div>
         </section>
 
+
+        <!-- Stories -->
+
         <section class="section-stories">
+            <div class="bg-video">
+                <video src="/Videos/Dean-Scared.mp4" class="bg-video__content"
+                    autoplay muted loop>
+                    <source src="/Videos/Dean-Scared.mp4" type="video/mp4">
+                    Your Browser is not Supported!!!
+                </video>
+            </div>
+
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
-                    Driver picks the music Shotgun shuts his cakehole
+                    "Driver picks the music; shotgun shuts his cakehole."
                 </h2>
             </div>
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img class="story__image"  src="/Images/exorcism.png" alt="">
+                        <img class="story__image" src="/Images/exorcism.png"
+                            alt="">
+                        <figcaption class="story__caption">
+                            Exorcism
+                        </figcaption>
                     </figure>
                     <div class="story__text">
                         <h3 class="heading-tertiary u-margin-bottom-small">
                             Reverse Exorcism to keep Demons in.
                         </h3>
                         <p>
-                            "Et secta diabolica, omnis congregatio, omnis legio, omnis incursio infernalis adversarii, omnis spiritus, exorcizamus!"
-                            This incantation is said to keep the Demon from escaping the host, and being locked in until excorcism is ready to be initiated.
+                            "Et secta diabolica, omnis congregatio, omnis legio,
+                            omnis incursio infernalis adversarii, omnis
+                            spiritus, exorcizamus!"
+                            This incantation is said to keep the Demon from
+                            escaping the host, and being locked in until
+                            excorcism is ready to be initiated.
                         </p>
 
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="story">
+                    <figure class="story__shape">
+                        <img class="story__image" src="/Images/castiel.webp"
+                            alt="">
+                        <figcaption class="story__caption">
+                            Castiel
+                        </figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            "Hey, Assbutt!"
+                        </h3>
+                        <p>
+                            Everyone, recalls the moment Castiel faced the
+                            archangel, Michael. Instead of busting out angelic
+                            power, Castiel simply yelled "Hey, a**butt" and
+                            burnt Michael to a crisp with a holy Molotov, making
+                            for both a phenomenal scene and quote.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="u-center-text u-margin-top-huge">
+                <a href="#" class="btn btn--text" id="more__allies">
+                    Good Stories &rarr;
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- Form Join the Hunters -->
+
+        <section class="section-book">
+            <div class="row">
+                <div class="book">
+                    <div class="book__form">
+                        <form action="#" class="form">
+                            <div class="u-margin-bottom-medium">
+                                <h2
+                                    class="heading-secondary form__secondary form__title">
+                                    Join The Hunters
+                                </h2>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" class="form__input"
+                                    placeholder="Full Name" id="name" required>
+                                <label for="name" class="form__label">Full
+                                    Name</label>
+                            </div>
+
+                            <div class="form__group">
+                                <input type="email" class="form__input"
+                                    placeholder="Email Address" id="name"
+                                    required>
+                                <label for="email" class="form__label">Email
+                                    Address</label>
+                            </div>
+                            <div class="form__group">
+                                <div class="from__radio-group">
+                                    <input type="radio"
+                                        class="form__radio-input" id="small"
+                                        name="size">
+                                    <label for="small"
+                                        class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Fight the Monsters</label>
+                                </div>
+                                <br>
+                                <div
+                                    class="form__radio-group u-margin-bottom-small">
+                                    <input type="radio"
+                                        class="form__radio-input" id="large"
+                                        name="size">
+                                    <label for="large"
+                                        class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Run from Monsters</label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <!-- <button class="btn btn--dark form__button">Next
+                                    Step &rarr;</button> -->
+                                <a href="#Winchesters"
+                                    class="btn btn--dark">Next Step &rarr;</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+
+    <!-- Footer -->
+
+    <footer class="footer" id="footer">
+        <div class="footer__logo-box">
+            <img src="/Images/supernaturalcolt_700x700-removebg-preview.png"
+                alt="Colt 45" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#hunters"
+                                class="footer__link">Hunters</a></li>
+                        <li class="footer__item"><a href="#adventures"
+                                class="footer__link">Adventures</a></li>
+                        <li class="footer__item"><a href="#angels"
+                                class="footer__link">Angels</a></li>
+                        <li class="footer__item"><a href="#demons"
+                                class="footer__link">Demons</a></li>
+                        <li class="footer__item"><a href="#monsters"
+                                class="footer__link">Monsters</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <p class="footer__copyright">
+                    Hunters, also known as ハンター (Hanta) in Japan, and Breakers
+                    in Scotland, are people, usually humans, who hunt down the
+                    supernatural and save people from monsters, demons, ghosts
+                    and other creatures and supernatural events.
+
+                    Built By <a href="#" class="footer__link">Sam Winchester</a>
+                    For the preservation and safety of all humans. This page was
+                    made possible with the help of <a href=""
+                        class="footer__link">Chris Barranger</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Popups -->
+
+    <div class="popup" id="Lucifer">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Lucifer2.webp" alt="Dean" class="popup__img">
+
+            </div>
+            <div class="popup__right">
+                <a href="#enemies" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Lucifer
+                    (Ruler of Hell)</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="Azazel">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Azazel4.webp" alt="Dean" class="popup__img">
+
+            </div>
+            <div class="popup__right">
+                <a href="#enemies" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">
+                    Azazel(Prince of Hell)</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="Cain">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Cain.jpg" alt="Dean" class="popup__img">
+                <img src="/Images/cain2.jpg" alt="Dean" class="popup__img">
+
+            </div>
+            <div class="popup__right">
+                <a href="#enemies" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Cain(The
+                    Father Murder)</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="Winchesters">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#allies" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popup" id="hunters">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#footer" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="adventures">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#footer" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="angels">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#footer" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="demons">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#footer" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="monsters">
+        <div class="popup__content">
+            <div class="pop__left">
+                <img src="/Images/Dean4.webp" alt="Dean" class="popup__img">
+                <img src="/Images/Sam.jpg" alt="Sam" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#footer" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Meet the
+                    Winchester Brothers</h2>
+                <h3 class="headin-tertiary u-margin-bottom-small">Important
+                    &ndash; Listen to the
+                    Hunters!!!</h3>
+                <p class="popup__text">
+                    They usually are just typical humans who, unlike others, are
+                    aware of the existence of supernatural beings and, even
+                    more, they fight against them to protect normal people from
+                    harm. One of the most recurring reasons to go into the
+                    hunter lifestyle is a tragedy in their lives that involved
+                    the supernatural (Mary Winchester, John's wife and Dean and
+                    Sam's mother, being killed by the demon Azazel; Bobby
+                    Singer's wife being possessed by a demon and Bobby having to
+                    kill her). However, there are other reasons to decide being
+                    a supernatural hunter, such as being raised as one.
+                    It is also shown that supernatural hunters typically pass
+                    their knowledge onto their children, as they could be killed
+                    by supernatural creatures that look for revenge or could
+                    appear. When they do so, a family of supernatural hunters is
+                    formed, like the Campbells, Harvelles or the Winchesters.
+                    Most hunters have a good physical condition suitable for
+                    hunting, and possess an extensive knowledge of the
+                    supernatural and mythology as well.
+                </p>
+                <a href="#" class="btn btn--black">Learn More</a>
+            </div>
+        </div>
+    </div>
+
 
 
 

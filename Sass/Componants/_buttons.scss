@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,6 +10,9 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -21,7 +25,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.0625rem);
     box-shadow: 0 0.3125rem 0.625rem $color-btn-hover;
   }
@@ -30,6 +36,7 @@
     background-color: $color-h1-color;
     color: $color-header-font;
     font-weight: 900;
+    margin-right: 20px;
 
     &::after {
       background-color: $color-h1-color;
@@ -46,8 +53,24 @@
     }
   }
 
+  &--black {
+    background-color: $color-grey-dark-2;
+    color: white;
+    font-weight: 900;
+  }
+
   &--discover {
     background-color: $color-h1-color-discover;
+    color: $color-header-font;
+    font-weight: 900;
+
+    &::after {
+      background-color: $color-grey-light-1;
+    }
+  }
+
+  &--text {
+    background-color: $color-h1-color-text;
     color: $color-header-font;
     font-weight: 900;
 

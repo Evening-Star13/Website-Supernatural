@@ -1,35 +1,69 @@
 .story {
-    width: 75%;
-    margin: 0 auto;
-    box-shadow: 0 1.875rem 3.75rem $color-black-opacity;
-    background-color: #fff;
-    border-radius: 3px;
-    padding: 3.75rem;
-    padding-left: 5.625rem;
-    font-size: $default-font-size;
-    transform: skewX(-12deg);
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.875rem 3.75rem $color-black-opacity;
+  background-color: $color-h1-color-text;
+  border-radius: 3px;
+  padding: 3.75rem;
+  padding-left: 5.625rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
 
-    & > * { 
-        transform: skewX(12deg);
-    }
+  
+  & > * {
+    transform: skewX(12deg);
+  }
 
-    &__shape {
-        width: 9.375rem;
-        height: 9.375rem;
-        float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        transform: translateX(-1.875rem) skewX(12deg);
-    }
+  &__shape {
+    width: 9.375rem;
+    height: 9.375rem;
+    float: left;
+    // -webkit-shape-outside: circle(50% at 50% 50%);
+    // shape-outside: circle(50% at 50% 50%);
+    // -webkit-clip-path: circle(50% at 50% 50%);
+    // clip-path: circle(50% at 50% 50%);
 
-    &__image {
-        height: 100%;
-    }
+    transform: translateX(-1.875rem) skewX(12deg);
+    position: relative;
+  }
 
-    &__text {
-        transform: skewX(12deg);
-    }
+  &__image {
+    height: 80%;
+    transform: translateX(-4.5rem) scale(1.2);
+    transition: all 0.9s;
+    backface-visibility: hidden;
+    border-radius: 200px;
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+    color: $color-h1-color;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -90%);
+  }
+
+  &:hover &__image {
+    transform: translateX(-2.5rem) scale(0.8);
+    filter: blur(3px) brightness(80%);
+  }
 }
 
+#more__allies {
+  color: #fff;
+}
