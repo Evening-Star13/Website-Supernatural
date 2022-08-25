@@ -4,24 +4,34 @@
   padding: 1.5625rem;
   text-align: center;
   border-radius: 3px;
-//   width: 120%;
+  //   width: 120%;
   box-shadow: 0 1rem 2.5rem $color-black-opacity;
   transition: transform 0.3s;
+
+  @include respond(tab-port) {
+    padding: 1.25rem;
+  }
+
   &__icon {
+    
     font-size: 3.75rem;
     margin-bottom: 0.3125rem;
     display: inline-block;
     background-image: linear-gradient(
       to right,
-      $color-header-font,
-      $color-header-background
+      $color-black,
+      $color-black
     );
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    
+    }
   }
 
   &:hover {
     transform: translateY(-1rem) scale(1.03);
   }
-
 }

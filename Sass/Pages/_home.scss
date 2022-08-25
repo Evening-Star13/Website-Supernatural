@@ -1,7 +1,11 @@
 .section-about {
   background-color: $color-section-background;
-  padding: 20rem 0;
+  padding: 250px 0;
   margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 200px 0;
+  }
 }
 
 .section-features {
@@ -20,18 +24,30 @@
   & > * {
     transform: skewY(7deg);
   }
+
+  @include respond(tab-port) {
+    padding: 9.375rem;
+  }
 }
 
 .section-enemies {
   background-color: $color-section-background;
-  padding: 20rem 0;
-  padding: 20rem 0 15.25rem 0;
+  // padding: 15.625rem 0;
+  padding: 15.625rem 0 9.375rem 0;
   margin-top: -8rem;
+
+  @include respond(tab-port) {
+    padding: 12.5rem 0 6.25rem 0;
+  }
 }
 
 .section-stories {
   position: relative;
   padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 6.25rem 0;
+  }
 }
 
 .section-book {
@@ -41,25 +57,58 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  @include respond(tab-port) {
+    padding: 6.25rem 0;
+  }
 }
 
 .book {
-  background-image: linear-gradient(105deg,
-   ($color-h1-color-opacity)0%,
-   ($color-h1-color-opacity)50%,
-    transparent 50%) ,
-     url(../../Images/cast960x540.png);
-    opacity: 0.5;
-  background-size: cover;
+  background-image: linear-gradient(
+      105deg,
+      ($color-h1-color-opacity) 0%,
+      ($color-h1-color-opacity) 50%,
+      transparent 50%
+    ),
+    url(../../Images/cast960x540.png);
+  opacity: 0.5;
+  background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 2.5rem $color-black-opacity;
 
-  height: 36.25rem;
+  // height: 36.25rem;
+
+  @include respond (tab-land) {
+    background-image: linear-gradient(
+      105deg,
+      ($color-h1-color-opacity) 0%,
+      ($color-h1-color-opacity) 65%,
+      transparent 65%
+    ),
+    url(../../Images/cast960x540.png);
+
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+      to right,
+      ($color-h1-color-opacity) 0%,
+      ($color-h1-color-opacity) 100%)
+      // ,url(../../Images/cast960x540.png)
+  }
 
   &__form {
     width: 50%;
     padding: 3.75rem;
 
+    @include respond (tab-land) {
+      width: 65%;
+    }
+
+    @include respond (tab-port) {
+      width: 100%;
+    }
+
   }
-  
 }
