@@ -33,3 +33,8 @@ body {
     padding: 0;
   }
 }
+
+::selection {
+  background-color: $color-header-gradient;
+  color: $color-h1-color;
+}
